@@ -1,0 +1,73 @@
+Para iniciar precimos instalar o geth:
+Vamos instalar o geth Geth (v1.8.13)
+
+
+1 - Criar o arquivo genesis.json em um diretorio qualquer.
+exemplo:
+c:\etherium\genesis.json
+
+2 - O arquivo json deve seguir esse modelo abaixo:
+{
+    "config":{
+        "chainId": 777,
+        "homesteadBlock": 0,
+        "eip155Block": 0,
+        "eip158Block": 0
+    },
+    "difficulty": "0x400",
+    "gasLimit": "0x8000000",
+    "alloc":{}
+}
+
+3 - Iniciar o json.
+abrir o prompt cmd e executar o comando abaixo.
+se deu tudo certo será criada uma chamada "data-private" pasta dentro da pasta que você criou no step 1
+C:\Program Files\Geth>.\geth.exe init c:\etherium\genesis.json --datadir c:\etherium\data-private
+
+4 - execute o comando abaixo:
+inicia a maquina
+C:\Program Files\Geth>geth.exe --datadir c:\etherium\data-private
+
+
+-------------------------------------------------------------------
+
+5 - Abra um novo console cmd (para que vc possa ver a mineração)
+
+6 - C:\Program Files\Geth>geth.exe attach ipc:\\.\pipe\geth.ipc
+
+7 - agora criando uma conta
+personal.newAccount("nomeQualquer")
+neste exemplo vamos usar o nome moonmaker 
+personal.newAccount("moonmaker");
+"0xe6abf55a6e5f65aa9e46a92194d51c53772d0e5b"
+
+apos a execução será exibida a sua chave publica
+
+8 - vamos desbloquear a conta criada.
+
+personal.unlockAccount(eth.accounts[0],"moonmaker",10000);
+True
+
+personal.newAccount("moonmaker");
+"0x777803455b4c3533545d5374a6f71b6b0894877c
+
+9 - Vamos começar a minerar
+miner.start()
+apos a execução ele retorna null
+
+10 - Vamos verificar o quanto vc ja canhou de ether na mineração.
+execute o comando abaixo:
+web3.fromWei(eth.getBalance(eth.accounts[0]), "ether")
+
+11 - para a mineração.
+miner.stop()
+apos a execução ele retorna true
+
+12 - Vamos listar as sua contas.
+personal.listAccount.
+Esse lista retorna as suas chaves.
+
+
+
+
+
