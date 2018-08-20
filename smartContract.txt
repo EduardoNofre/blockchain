@@ -1,4 +1,4 @@
-Smart contract
+﻿Smart contract
 
 ja mineremos vamos criar um contrato basico
 
@@ -140,6 +140,8 @@ vamos chamar as funções do livrovisitas.js
 
  
 https://github.com/astarlabs/desenvolvedor-ethereum-blockchain/blob/master/balance.js
+
+https://remix.ethereum.org/#optimize=true&version=soljson-v0.4.24+commit.e67f0147.js
  
 
 
